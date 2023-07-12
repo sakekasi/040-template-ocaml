@@ -1,0 +1,15 @@
+opam-version: "2.0"
+name: "{{your project name here}}"
+version: "0.1"
+synopsis: "{{synopsis}}"
+description: """
+{{description}}
+"""
+maintainer: "Saketh Kasibatla <sake.kasi@gmail.com>"
+authors: "Saketh Kasibatla <sake.kasi@gmail.com>"
+depends: [ "ocaml" "ocamlfind" ]
+build: [
+  ["./configure" "--prefix=%{prefix}%"]
+  [make]
+]
+install: [make "install"]
